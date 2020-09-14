@@ -7,6 +7,7 @@ from telegram.ext import Updater,CommandHandler,MessageHandler,Filters
   context.bot.send_message(chat_id=update.effective_chat.id, text="Led turned off")
   context.bot.send_photo(chat_id=update.effective_chat.id,photo='https://pngimg.com/uploads/bulb/bulb_PNG1241.png')
   send_value(0)
+  
 def turnon(update, context):
   context.bot.send_message(chat_id=update.effective_chat.id, text="Led turned on")
   context.bot.send_photo(chat_id=update.effective_chat.id,photo='https://img.icons8.com/plasticine/2x/light-on.png')
@@ -30,9 +31,11 @@ def start(update,context):
 /turnon or 'turn on'  :To turn on the led ,sends value=1 in feed
 '''
   context.bot.send_message(chat_id=update.effective_chat.id, text=start_message)
+  
 ADAFRUIT_IO_USERNAME = os.getenv('upputuri')
 ADAFRUIT_IO_KEY =  os.getenv('aio_mUCS54aDtWOQ8KeZpqsJ3cAIDs4a')
 TOKEN = os.getenv('1296091717:AAGJ-Ou8g9fBR9shBJbik8pECYj3sB4FwDI')
+
  aio = Client(ADAFRUIT_IO_USERNAME,ADAFRUIT_IO_KEY)
 updater=Updater(TOKEN,use_context=True)
 dispatcher = updater.dispatcher

@@ -11,11 +11,9 @@ def turnon(update, context):
   context.bot.send_message(chat_id=update.effective_chat.id, text="Led turned on")
   context.bot.send_photo(chat_id=update.effective_chat.id,photo='https://img.icons8.com/plasticine/2x/light-on.png')
   send_value(1)
-
 def send_value(value):
   feed = aio.feeds('light')
   aio.send_data(feed.key,value)
-
 def input_message(update, context):
   text=update.message.text
   if text == 'turn on':
@@ -26,7 +24,6 @@ def input_message(update, context):
     send_value(0)
     context.bot.send_message(chat_id=update.effective_chat.id,text="Led turned off")
     context.bot.send_photo(chat_id=update.effective_chat.id,photo='https://pngimg.com/uploads/bulb/bulb_PNG1241.png')
-
 def start(update,context):
   start_message='''
 /turnoff or 'turn off':To turn of the led ,sends value=0 in feed

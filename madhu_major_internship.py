@@ -34,7 +34,7 @@ def start(update,context):
 '''
   context.bot.send_message(chat_id=update.effective_chat.id, text=start_message)
 ADAFRUIT_IO_USERNAME = 'upputuri'
-ADAFRUIT_IO_KEY = 'aio_iIre578q1H0Hfbsw6fB5aIruGvly'
+ADAFRUIT_IO_KEY = 'aio_DvNl62vURHa5IsLBJ0qN2bTR7kVl'
 TOKEN = '1296091717:AAGJ-Ou8g9fBR9shBJbik8pECYj3sB4FwDI'
  aio = Client(ADAFRUIT_IO_USERNAME,ADAFRUIT_IO_KEY)
 updater=Updater(TOKEN,use_context=True)

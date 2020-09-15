@@ -34,7 +34,7 @@ def start(update,context):
 '''
   context.bot.send_message(chat_id=update.effective_chat.id, text=start_message)
 ADAFRUIT_IO_USERNAME = os.getenv('upputuri')
-ADAFRUIT_IO_KEY = os.getenv('aio_Nnzk44nWAOgV0yeezjyFYi4VVW2p')
+ADAFRUIT_IO_KEY = os.getenv('aio_lxEm76gRpG7rTlg69Ts7vOkIJT7m')
 TOKEN = os.getenv('1296091717:AAGJ-Ou8g9fBR9shBJbik8pECYj3sB4FwDI')
  aio = Client(ADAFRUIT_IO_USERNAME,ADAFRUIT_IO_KEY)
 updater=Updater(TOKEN,use_context=True)
@@ -45,5 +45,6 @@ dispatcher.add_handler(CommandHandler('start',start))
 dispatcher.add_handler(MessageHandler(Filters.text & (~Filters.command),input_message))
 updater.start_polling()
 updater.idle()
+
 
 

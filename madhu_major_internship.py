@@ -33,9 +33,9 @@ def start(update,context):
 /turnon or 'turn on'  :To turn on the led ,sends value=1 in feed
 '''
   context.bot.send_message(chat_id=update.effective_chat.id, text=start_message)
-ADAFRUIT_IO_USERNAME = 'upputuri'
-ADAFRUIT_IO_KEY = 'aio_DvNl62vURHa5IsLBJ0qN2bTR7kVl'
-TOKEN = '1296091717:AAGJ-Ou8g9fBR9shBJbik8pECYj3sB4FwDI'
+ADAFRUIT_IO_USERNAME = os.getenv('upputuri')
+ADAFRUIT_IO_KEY = os.getenv('aio_mFYs52MwNQEUwnptwYHbttE0ve18')
+TOKEN =os.getenv('1296091717:AAGJ-Ou8g9fBR9shBJbik8pECYj3sB4FwDI')
  aio = Client(ADAFRUIT_IO_USERNAME,ADAFRUIT_IO_KEY)
 updater=Updater(TOKEN,use_context=True)
 dispatcher = updater.dispatcher
